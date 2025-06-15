@@ -263,17 +263,15 @@ const Checkout = () => {
                 <label className="block mb-1 text-[#1C1C1C] font-medium">
                   الدولة
                 </label>
-                <div>
-                  <select
-                    className="w-full border border-[#D8D8D8] rounded-md p-3 text-sm text-right placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-200 bg-white"
-                    defaultValue="الأردن"
-                  >
-                    <option value="الأردن">الأردن</option>
-                    <option value="السعودية">السعودية</option>
-                    <option value="مصر">مصر</option>
-                    <option value="الإمارات">الإمارات</option>
-                  </select>
-                </div>
+                <select
+                  className="w-full border border-[#D8D8D8] rounded-[8px] p-3 text-sm text-right text-[#1C1C1C] bg-white focus:outline-none focus:ring-2 focus:ring-blue-100 appearance-none"
+                  defaultValue="الأردن"
+                >
+                  <option value="الأردن">الأردن</option>
+                  <option value="السعودية">السعودية</option>
+                  <option value="مصر">مصر</option>
+                  <option value="الإمارات">الإمارات</option>
+                </select>
               </div>
 
               {/* City */}
