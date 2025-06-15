@@ -274,38 +274,95 @@ const Checkout = () => {
           </div>
 
           {/* Payment Method */}
-          <div className="bg-white p-6 rounded-xl shadow-sm">
-            <h2 className="text-lg font-semibold mb-4 text-[#1C1C1C]">
-              أختر طريقة الدفع
+          <div
+            className="bg-white p-6 rounded-[24px] shadow-sm w-full max-w-[582px] text-right space-y-6"
+            dir="rtl"
+          >
+            <h2 className="text-[20px] font-medium text-[#686767] leading-[100%]">
+              اختر طريقة الدفع
             </h2>
-            <div className="space-y-3 text-sm">
-              <div className="border p-3 rounded cursor-pointer flex justify-between items-center">
-                الدفع باستخدام البطاقة
+
+            {/* Option 1: الدفع باستخدام البطاقة */}
+            <label className="flex items-center justify-between border border-[#D8D8D8] rounded-[16px] px-4 py-4 cursor-pointer">
+              {/* ✅ Radio on Right */}
+              <input
+                type="radio"
+                name="payment"
+                className="w-5 h-5 accent-blue-500 ml-4"
+              />
+
+              <div className="flex items-center gap-3 flex-1 justify-between">
+                <div className="flex flex-col items-end text-right">
+                  <span className="text-[#1C1C1C] text-[14px] font-normal">
+                    الدفع باستخدام البطاقة
+                  </span>
+                </div>
+
                 <div className="flex gap-2">
                   <img
-                    src="https://img.icons8.com/color/24/visa.png"
+                    src="https://img.icons8.com/color/48/visa.png"
                     alt="Visa"
+                    className="w-[61px] h-[42px] object-contain"
                   />
                   <img
-                    src="https://img.icons8.com/color/24/mastercard-logo.png"
+                    src="https://img.icons8.com/color/48/mastercard-logo.png"
                     alt="MasterCard"
+                    className="w-[42px] h-[42px] object-contain"
                   />
                   <img
-                    src="https://img.icons8.com/color/24/paypal.png"
+                    src="https://img.icons8.com/color/48/paypal.png"
                     alt="PayPal"
+                    className="w-[42px] h-[42px] object-contain"
                   />
                 </div>
               </div>
-              <div className="border p-3 rounded cursor-pointer">
-                الدفع كاش في عيادة أولم
+            </label>
+
+            {/* Option 2: كاش */}
+            <label className="flex items-center justify-between border border-[#D8D8D8] rounded-[16px] px-4 py-4 cursor-pointer">
+              <input
+                type="radio"
+                name="payment"
+                className="w-5 h-5 accent-blue-500 ml-4"
+              />
+              <span className="text-[#1C1C1C] text-[14px] font-normal flex-1 text-right">
+                الدفع كاش في نيو أولم
+              </span>
+            </label>
+
+            {/* Option 3: تقسيط بنك */}
+            <label className="flex items-center justify-between border border-[#D8D8D8] rounded-[16px] px-4 py-4 cursor-pointer">
+              <input
+                type="radio"
+                name="payment"
+                className="w-5 h-5 accent-blue-500 ml-4"
+              />
+              <div className="flex flex-col items-end text-right flex-1">
+                <span className="text-[#1C1C1C] text-[14px] font-normal">
+                  دفع بالتقسيط عن طريق البنك
+                </span>
+                <span className="text-[#0798F1] text-[14px] font-medium">
+                  من 10 إلى JOD 1,000
+                </span>
               </div>
-              <div className="border p-3 rounded cursor-pointer">
-                دفع بالتقسيط عن طريق البنك — من 10 إلى 1,000 JOD
+            </label>
+
+            {/* Option 4: تقسيط موقع */}
+            <label className="flex items-center justify-between border border-[#D8D8D8] rounded-[16px] px-4 py-4 cursor-pointer">
+              <input
+                type="radio"
+                name="payment"
+                className="w-5 h-5 accent-blue-500 ml-4"
+              />
+              <div className="flex flex-col items-end text-right flex-1">
+                <span className="text-[#1C1C1C] text-[14px] font-normal">
+                  دفع بالتقسيط عن طريق الموقع
+                </span>
+                <span className="text-[#0798F1] text-[14px] font-medium">
+                  من 1,000 إلى JOD 10,000
+                </span>
               </div>
-              <div className="border p-3 rounded cursor-pointer">
-                دفع بالتقسيط عن طريق الموقع — من 10 إلى 10,000 JOD
-              </div>
-            </div>
+            </label>
           </div>
         </section>
       </main>
