@@ -267,7 +267,7 @@ const Checkout = () => {
               {/* Save Button */}
               <button
                 type="submit"
-                className="text-blue-600 text-sm mt-2 hover:underline self-start"
+                className="text-blue-600 text-sm mt-2 hover:underline self-end"
               >
                 حفظ
               </button>
