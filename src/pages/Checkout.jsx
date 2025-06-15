@@ -135,24 +135,42 @@ const Checkout = () => {
             <h2 className="text-xl font-bold mb-4 text-[#1C1C1C]">
               عنوان الفواتير المحفوظة
             </h2>
+
             <div className="space-y-3">
               {[0, 1].map((i) => (
                 <div
                   key={i}
-                  className={`flex justify-between items-start gap-2 rounded-[8px] p-4 border text-sm
-          ${
-            i === 0
-              ? "bg-[#F3FAFE] border-[#ADE4FF]"
-              : "bg-white border-[#D8D8D8]"
-          }`}
+                  className={`flex items-start gap-4 rounded-[8px] p-4 border text-sm transition
+        ${
+          i === 0
+            ? "bg-[#F3FAFE] border-[#ADE4FF]"
+            : "bg-white border-[#D8D8D8]"
+        }`}
                 >
-                  {/* Icons */}
-                  <div className="flex flex-col items-start gap-2 text-gray-400">
-                    <button title="حذف">🗑️</button>
-                    <button title="تعديل">✏️</button>
+                  {/* Select circle on far right */}
+                  <div className="mt-1 ml-2">
+                    {i === 0 ? (
+                      <div className="w-6 h-6 rounded-full bg-[#0099FF] flex items-center justify-center">
+                        <svg
+                          className="w-4 h-4 text-white"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="3"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      </div>
+                    ) : (
+                      <div className="w-6 h-6 rounded-full border border-gray-400" />
+                    )}
                   </div>
 
-                  {/* Text info */}
+                  {/* Text Info */}
                   <div className="flex-1 text-right">
                     <p className="font-bold text-sm text-[#1C1C1C]">
                       محمود محمد
@@ -164,13 +182,43 @@ const Checkout = () => {
                     <p className="text-gray-400 mt-1 text-sm">11025</p>
                   </div>
 
-                  {/* Select status */}
-                  <div className="mt-1">
-                    {i === 0 ? (
-                      <div className="text-blue-500 text-xl">✔</div>
-                    ) : (
-                      <div className="w-4 h-4 rounded-full border border-gray-400" />
-                    )}
+                  {/* Icons (edit/delete) on far left */}
+                  <div className="flex flex-col items-start gap-2 text-gray-400">
+                    <button title="حذف">
+                      <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </button>
+                    <button title="تعديل">
+                      <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M12 20h9"
+                        />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M16.5 3.5l4 4L7 21H3v-4L16.5 3.5z"
+                        />
+                      </svg>
+                    </button>
                   </div>
                 </div>
               ))}
