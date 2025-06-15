@@ -242,7 +242,7 @@ const Checkout = () => {
                 <input
                   type="text"
                   placeholder="أضف الاسم الأول"
-                  className="w-full border border-[#D8D8D8] rounded-md p-3 text-right placeholder:text-gray-400"
+                  className="w-full border border-[#D8D8D8] rounded-[8px] p-3 text-sm text-right text-[#1C1C1C] bg-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-100"
                 />
               </div>
 
@@ -254,7 +254,7 @@ const Checkout = () => {
                 <input
                   type="text"
                   placeholder="أضف الاسم الأخير"
-                  className="w-full border border-[#D8D8D8] rounded-md p-3 text-right placeholder:text-gray-400"
+                  className="w-full border border-[#D8D8D8] rounded-[8px] p-3 text-sm text-right text-[#1C1C1C] bg-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-100"
                 />
               </div>
 
@@ -275,6 +275,7 @@ const Checkout = () => {
               </div>
 
               {/* City */}
+              {/* المدينة */}
               <div>
                 <label className="block mb-1 text-[#1C1C1C] font-medium">
                   المدينة
@@ -282,11 +283,11 @@ const Checkout = () => {
                 <input
                   type="text"
                   placeholder="أضف المدينة"
-                  className="w-full border border-[#D8D8D8] rounded-md p-3 text-right placeholder:text-gray-400"
+                  className="w-full border border-[#D8D8D8] rounded-[8px] p-3 text-sm text-right text-[#1C1C1C] bg-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-100"
                 />
               </div>
 
-              {/* Street */}
+              {/* اسم الشارع */}
               <div>
                 <label className="block mb-1 text-[#1C1C1C] font-medium">
                   اسم الشارع
@@ -294,11 +295,11 @@ const Checkout = () => {
                 <input
                   type="text"
                   placeholder="أضف العنوان بالتفصيل"
-                  className="w-full border border-[#D8D8D8] rounded-md p-3 text-right placeholder:text-gray-400"
+                  className="w-full border border-[#D8D8D8] rounded-[8px] p-3 text-sm text-right text-[#1C1C1C] bg-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-100"
                 />
               </div>
 
-              {/* Zip Code */}
+              {/* الرمز البريدي */}
               <div>
                 <label className="block mb-1 text-[#1C1C1C] font-medium">
                   الرمز البريدي
@@ -306,14 +307,13 @@ const Checkout = () => {
                 <input
                   type="text"
                   placeholder="أضف الرمز للمنطقة"
-                  className="w-full border border-[#D8D8D8] rounded-md p-3 text-right placeholder:text-gray-400"
+                  className="w-full border border-[#D8D8D8] rounded-[8px] p-3 text-sm text-right text-[#1C1C1C] bg-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-100"
                 />
               </div>
 
-              {/* Save Button */}
               <button
                 type="submit"
-                className="text-blue-600 text-sm mt-2 hover:underline self-end"
+                className="bg-[#0798F1] hover:bg-[#007dd1] text-white text-sm font-medium px-6 py-2 rounded-[8px] self-end transition-colors"
               >
                 حفظ
               </button>
